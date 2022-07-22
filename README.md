@@ -11,5 +11,3 @@ Para iniciar la aplicación, debes ejecutar el comando npm start en el terminal.
 ## Instalar Módulos
 
 Para instalar los módulos necesarios para la aplicación, debes ejecutar el comando npm install en el terminal.
-
-
