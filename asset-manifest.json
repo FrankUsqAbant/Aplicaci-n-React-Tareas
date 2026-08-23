@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Aplicaci-n-React-Tareas/static/css/main.0805eed0.css",
+    "main.js": "/Aplicaci-n-React-Tareas/static/js/main.383ae6f6.js",
+    "index.html": "/Aplicaci-n-React-Tareas/index.html",
+    "main.0805eed0.css.map": "/Aplicaci-n-React-Tareas/static/css/main.0805eed0.css.map",
+    "main.383ae6f6.js.map": "/Aplicaci-n-React-Tareas/static/js/main.383ae6f6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0805eed0.css",
+    "static/js/main.383ae6f6.js"
+  ]
+}
