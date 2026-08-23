@@ -2,10 +2,13 @@
 
 <img src="./public/imagenes/title_header.svg" alt="Task Pulse Header" width="100%" />
 
-[![Task Pulse Demo](./public/imagenes/Principal.webp)](https://github.com/FrankUsqAbant/Aplicaci-n-React-Tareas)
+[![Task Pulse Demo](./public/imagenes/Principal.webp)](https://frankusqabant.github.io/Aplicaci-n-React-Tareas/)
+
+👉 **[🌐 Haz clic aquí para ver la Aplicación en Vivo (GitHub Pages)](https://frankusqabant.github.io/Aplicaci-n-React-Tareas/)** 👈
 
 <br/>
 
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)](https://frankusqabant.github.io/Aplicaci-n-React-Tareas/)
 [![React](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript_ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 [![CSS3](https://img.shields.io/badge/CSS3_Glassmorphism-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
