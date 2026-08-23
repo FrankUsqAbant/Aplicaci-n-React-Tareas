@@ -7,8 +7,9 @@ function Tarea({ id, texto, completada, prioridad, categoria, creadaEn, completa
   const [textoEditado, setTextoEditado] = useState(texto);
 
   const guardarEdicion = () => {
-    if (textoEditado.trim() && textoEditado !== texto) {
-      editarTarea(id, textoEditado.trim());
+    const limpio = textoEditado.trim().slice(0, 150);
+    if (limpio && limpio !== texto) {
+      editarTarea(id, limpio);
     }
     setEstaEditando(false);
   };
@@ -50,6 +51,7 @@ function Tarea({ id, texto, completada, prioridad, categoria, creadaEn, completa
               type="text"
               className="tarea-input-editar"
               value={textoEditado}
+              maxLength={150}
               autoFocus
               onChange={(e) => setTextoEditado(e.target.value)}
               onKeyDown={manejarKeyDown}

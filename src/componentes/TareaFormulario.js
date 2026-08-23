@@ -11,14 +11,21 @@ function TareaFormulario({ onSubmit }) {
 
   const manejarEnvio = (e) => {
     e.preventDefault();
-    if (!texto.trim()) return;
+    const textoLimpio = texto.trim().slice(0, 150);
+    if (!textoLimpio) return;
+
+    const prioridadesPermitidas = ["alta", "media", "baja"];
+    const prioridadSegura = prioridadesPermitidas.includes(prioridad) ? prioridad : "media";
+
+    const categoriasPermitidas = ["Trabajo", "Personal", "Estudio", "Proyecto", "Hogar"];
+    const categoriaSegura = categoriasPermitidas.includes(categoria) ? categoria : "Trabajo";
 
     const tareaNueva = {
       id: uuidv4(),
-      texto: texto.trim(),
+      texto: textoLimpio,
       completada: false,
-      prioridad: prioridad,
-      categoria: categoria,
+      prioridad: prioridadSegura,
+      categoria: categoriaSegura,
       creadaEn: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     };
 
@@ -34,6 +41,7 @@ function TareaFormulario({ onSubmit }) {
           type="text"
           placeholder="¿Qué tarea tienes pendiente hoy?"
           value={texto}
+          maxLength={150}
           onChange={(e) => setTexto(e.target.value)}
         />
         <button type="submit" className="formulario-boton-agregar" disabled={!texto.trim()}>

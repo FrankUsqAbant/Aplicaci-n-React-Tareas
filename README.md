@@ -1,36 +1,49 @@
-# ⚡ TASK PULSE
+<div align="center">
 
-[![Task Pulse Live Demo](./public/imagenes/Principal.webp)](https://frankusqabant.github.io/Aplicaci-n-React-Tareas/)
+<img src="./public/imagenes/title_header.svg" alt="Task Pulse" width="460" />
 
-<p align="center">
-  <a href="https://frankusqabant.github.io/Aplicaci-n-React-Tareas/">
-    <img src="https://img.shields.io/badge/▶_PROBAR_EN_VIVO_EN_GITHUB_PAGES-6366F1?style=for-the-badge&logo=github&logoColor=white" alt="Live Demo" />
-  </a>
-</p>
+<br/>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React 18" />
-  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/CSS3-Glassmorphism-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/LocalStorage-Persistente-10B981?style=flat-square" alt="LocalStorage" />
-  <img src="https://img.shields.io/badge/GitHub_Pages-Online_24%2F7-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
-</p>
+<a href="https://frankusqabant.github.io/Aplicaci-n-React-Tareas/">
+  <img src="./public/imagenes/Principal.webp" alt="Task Pulse App Preview" width="620" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+</a>
 
----
+<br/><br/>
 
-## ✨ Características Principales
+[![Live Demo](https://img.shields.io/badge/▶_PROBAR_EN_VIVO-6366F1?style=for-the-badge&logo=githubpages&logoColor=white)](https://frankusqabant.github.io/Aplicaci-n-React-Tareas/)
 
-* 🎨 **Cyber Glassmorphism:** Fondo ambiental de nebulosa con destellos flotantes, cristal translúcido y estética dark moderna.
-* 📊 **Anillo de Productividad en Vivo:** Medidor circular que calcula en tiempo real el porcentaje y total de tareas completadas.
-* 🔥 **Prioridades y Categorías:** Clasificación por niveles (*Alta 🔥*, *Media ⚡*, *Baja 🍃*) y etiquetas temáticas (*Trabajo*, *Personal*, *Estudio*, *Proyecto*, *Hogar*).
-* ✏️ **Edición en Línea:** Modificación directa con atajos de teclado (`Enter` para guardar, `Escape` para cancelar).
-* 🔍 **Filtros Dinámicos & Buscador:** Alterna entre *Todas*, *Pendientes* y *Completadas* con búsqueda instantánea.
-* 💾 **Persistencia Automática:** Almacenamiento local en `localStorage` que conserva tus tareas para siempre.
+<br/>
+
+[![React](https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![CSS3](https://img.shields.io/badge/CSS3-Glassmorphism-1572B6?style=flat-square&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
+[![LocalStorage](https://img.shields.io/badge/LocalStorage-Persistente-10B981?style=flat-square)](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
+
+</div>
 
 ---
 
-## 🌐 Enlace de la Aplicación en Vivo
+### ⚡ Lo Esencial
 
-Haz clic en el enlace para abrir la aplicación desplegada en la nube:
+* 🎨 **Cyber Glassmorphism:** Fondo de nebulosa dinámico con destellos flotantes y cristal templado.
+* 📊 **Anillo de Progreso en Vivo:** Cálculo instantáneo del porcentaje y total de tareas completadas.
+* 🔥 **Prioridades & Categorías:** Clasificación por urgencia (*Alta*, *Media*, *Baja*) y áreas (*Trabajo*, *Personal*, *Estudio*, *Proyecto*).
+* ✏️ **Edición en Línea:** Modificación directa con atajos de teclado (`Enter` / `Escape`).
+* 🔍 **Filtros Reactivos & Buscador:** Pestañas para ver *Todas*, *Pendientes* o *Completadas* con búsqueda en tiempo real.
+* 💾 **Persistencia Automática:** Almacenamiento seguro en `localStorage` (sin pérdida de datos).
+
+---
+
+### 🚀 Probar en Vivo
 
 👉 **[https://frankusqabant.github.io/Aplicaci-n-React-Tareas/](https://frankusqabant.github.io/Aplicaci-n-React-Tareas/)**
+
+---
+
+### 💻 Inicio Rápido en Local
+
+```bash
+git clone https://github.com/FrankUsqAbant/Aplicaci-n-React-Tareas.git && cd Aplicaci-n-React-Tareas
+npm install
+npm start
+```
