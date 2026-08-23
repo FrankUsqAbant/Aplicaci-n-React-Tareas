@@ -1,13 +1,46 @@
-## APLICACION DE TAREAS
+<div align="center">
 
-![Aplicacion-React-Tareas](https://user-images.githubusercontent.com/90288287/166164842-5c0bc772-0754-47f9-92e8-9da51ba4a19d.png)
+<img src="./public/imagenes/title_header.svg" alt="Task Pulse Header" width="100%" />
 
-Esta es una aplicación de tareas interactiva desarrollada con React. Puedes agregar una tarea, eliminarla de la lista y marcarla como completada. Su estructura inicial fue creada con el comando npx create-react-app.
+[![Task Pulse Demo](./public/imagenes/Principal.webp)](https://github.com/FrankUsqAbant/Aplicaci-n-React-Tareas)
 
-## Ejecutar la Aplicación
+<br/>
 
-Para iniciar la aplicación, debes ejecutar el comando npm start en el terminal. 
+[![React](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript_ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![CSS3](https://img.shields.io/badge/CSS3_Glassmorphism-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
+[![LocalStorage](https://img.shields.io/badge/LocalStorage-Persistente-10B981?style=for-the-badge)](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage)
 
-## Instalar Módulos
+</div>
 
-Para instalar los módulos necesarios para la aplicación, debes ejecutar el comando npm install en el terminal.
+---
+
+### ⚡ Lo Esencial
+* 🎨 **Cyber Glassmorphism UI:** Diseño moderno con fondo ambiental dinámico de nebulosa, desenfoque de cristal y brillo balanceado.
+* 📊 **Anillo de Progreso en Vivo:** Medidor circular que calcula en tiempo real el porcentaje y total de tareas completadas.
+* 🔥 **Gestión de Prioridades & Categorías:** Clasificación rápida (*Alta*, *Media*, *Baja*) y categorías (*Trabajo*, *Personal*, *Estudio*, *Proyecto*).
+* ✏️ **Edición en Línea:** Modificación directa del texto de las tareas con atajos de teclado (`Enter` / `Escape`).
+* 🔍 **Filtros & Buscador Reactivo:** Filtrado instantáneo por estado (*Todas*, *Pendientes*, *Completadas*) y buscador en vivo.
+* 💾 **Persistencia Automática:** Almacenamiento local seguro en `localStorage` sin pérdida de datos.
+
+---
+
+### 💻 Ejecución Local Rápida
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/FrankUsqAbant/Aplicaci-n-React-Tareas.git && cd Aplicaci-n-React-Tareas
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Iniciar el servidor local
+npm start
+```
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para interactuar con la aplicación.
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Desarrollado con excelencia técnica y pasión por el diseño moderno.

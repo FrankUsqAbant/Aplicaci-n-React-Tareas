@@ -1,6 +1,150 @@
-.tareas-lista-contenedor {
+.lista-tareas-wrapper {
   display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Barra de Controles */
+.controles-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.buscador-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  flex: 1;
+  min-width: 180px;
+  transition: all 0.2s ease;
+}
+
+.buscador-contenedor:focus-within {
+  border-color: var(--color-cyan);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.buscador-icono {
+  color: var(--text-dim);
+}
+
+.buscador-input {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-size: 13px;
+  outline: none;
+  width: 100%;
+}
+
+.buscador-input::placeholder {
+  color: var(--text-dim);
+}
+
+/* Pestañas de Filtros */
+.filtros-pestañas {
+  display: flex;
+  background: rgba(13, 17, 28, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  gap: 3px;
+}
+
+.filtro-tab {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filtro-tab:hover {
+  color: var(--text-main);
+}
+
+.filtro-tab.activo {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+}
+
+/* Grid de Tareas */
+.tareas-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 120px;
+}
+
+/* Estado Vacío */
+.tareas-vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.vacio-icono {
+  color: var(--text-dim);
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+.vacio-titulo {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.vacio-subtitulo {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+/* Acciones Globales */
+.acciones-globales {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+.btn-limpiar-completadas {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-dim);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-limpiar-completadas:hover {
+  background: rgba(244, 63, 94, 0.1);
+  border-color: rgba(244, 63, 94, 0.3);
+  color: var(--priority-high);
 }

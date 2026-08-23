@@ -1,35 +1,171 @@
-/* Estructura principal */
-
-.tarea-formulario {
+.formulario-contenedor {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Campo de texto */
-
-.tarea-input {
-  width: 350px;
-  /* height: 18px; */
-  background-color: white;
-  padding: 14px 32px 14px 16px;
-  border-radius: 4px 0 0 4px;
-  border: 2px solid #00471b;
-  outline: none;
-}
-
-/* Boton agregar tarea */
-
-.tarea-boton {
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(13, 17, 28, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
   padding: 16px;
-  font-size: 18px;
-  font-family: Roboto, sans-serif;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
+  backdrop-filter: blur(12px);
+  margin-bottom: 20px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formulario-contenedor:focus-within {
+  border-color: var(--border-active);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+}
+
+.formulario-input-fila {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.formulario-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 15px;
+  color: var(--text-main);
   outline: none;
-  background: #0047b1;
-  color: #fff;
-  text-transform: capitalize;
+  transition: all 0.2s ease;
+}
+
+.formulario-input::placeholder {
+  color: var(--text-dim);
+}
+
+.formulario-input:focus {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--color-cyan);
+}
+
+.formulario-boton-agregar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+  transition: all 0.2s ease;
+}
+
+.formulario-boton-agregar:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+  filter: brightness(1.1);
+}
+
+.formulario-boton-agregar:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.formulario-opciones-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.opciones-grupo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.opciones-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prioridades-selector {
+  display: flex;
+  gap: 6px;
+}
+
+.prioridad-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.prioridad-btn.alta:hover,
+.prioridad-btn.alta.activa {
+  background: var(--priority-high-bg);
+  border-color: var(--priority-high-border);
+  color: var(--priority-high);
+}
+
+.prioridad-btn.media:hover,
+.prioridad-btn.media.activa {
+  background: var(--priority-med-bg);
+  border-color: var(--priority-med-border);
+  color: var(--priority-med);
+}
+
+.prioridad-btn.baja:hover,
+.prioridad-btn.baja.activa {
+  background: var(--priority-low-bg);
+  border-color: var(--priority-low-border);
+  color: var(--priority-low);
+}
+
+.categoria-select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-main);
+  outline: none;
+  cursor: pointer;
+}
+
+.categoria-select option {
+  background: #121724;
+  color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+  .formulario-input-fila {
+    flex-direction: column;
+  }
+  .formulario-boton-agregar {
+    padding: 12px;
+    justify-content: center;
+  }
+  .formulario-opciones-fila {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

@@ -1,55 +1,171 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  color: white;
-  background-color: #1b1b32;
-  font-family: Lato, sans-serif;
-  margin-top: 40px;
-}
-
-h1 {
-  color: #1b1b32;
-  font-size: 25px;
-  font-family: Roboto, sans-serif;
-  text-align: center;
-  margin: 20px 0;
-}
-
-.aplicacion-tareas {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Logo de freeCodeCamp */
-
-.freecodecamp-logo-contenedor {
+.app-container {
+  max-width: 720px;
   width: 100%;
-  margin: 20px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 8px;
+}
+
+.header-marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-icono-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(56, 189, 248, 0.2) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.logo-emoji {
+  font-size: 24px;
+}
+
+.marca-textos {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-titulo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.logo-resaltado {
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-subtitulo {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-top: 3px;
+}
+
+/* Métricas Card */
+.metricas-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(18, 24, 38, 0.65);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 10px 18px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.4);
+}
+
+.progreso-circular {
+  position: relative;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.freecodecamp-logo {
-  width: 400px;
-  height: 50px;
+.progreso-svg {
+  transform: rotate(-90deg);
 }
 
-/* Lista de tareas */
+.progreso-circulo-barra {
+  transition: stroke-dashoffset 0.5s ease;
+}
 
-.tareas-lista-principal {
-  width: 600px;
-  min-height: 500px;
-  background-color: #d0d0d5;
-  padding: 25px;
-  margin: 10px;
+.progreso-porcentaje {
+  position: absolute;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
 
-  border-radius: 26px;
+.metricas-detalles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metrica-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.metrica-valor {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.metrica-label {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.chip-pendientes {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-cyan);
+  background: var(--color-cyan-glow);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Main Card */
+.app-main-card {
+  background: rgba(18, 24, 38, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-dim);
+  padding-top: 10px;
+}
+
+@media (max-width: 650px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .metricas-card {
+    width: 100%;
+    justify-content: space-between;
+  }
 }

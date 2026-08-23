@@ -1,13 +1,140 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* Colors */
+  --bg-main: #0A0D16;
+  --bg-card: rgba(16, 22, 36, 0.75);
+  --bg-card-hover: rgba(24, 32, 52, 0.88);
+  --bg-input: rgba(11, 15, 26, 0.85);
+  
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-active: rgba(99, 102, 241, 0.5);
+  --border-focus: rgba(56, 189, 248, 0.6);
+
+  /* Accents */
+  --color-primary: #6366F1;
+  --color-primary-glow: rgba(99, 102, 241, 0.4);
+  --color-cyan: #38BDF8;
+  --color-cyan-glow: rgba(56, 189, 248, 0.35);
+  
+  /* Priorities */
+  --priority-high: #F43F5E;
+  --priority-high-bg: rgba(244, 63, 94, 0.18);
+  --priority-high-border: rgba(244, 63, 94, 0.45);
+
+  --priority-med: #F59E0B;
+  --priority-med-bg: rgba(245, 158, 11, 0.18);
+  --priority-med-border: rgba(245, 158, 11, 0.45);
+
+  --priority-low: #10B981;
+  --priority-low-bg: rgba(16, 185, 129, 0.18);
+  --priority-low-border: rgba(16, 185, 129, 0.45);
+
+  /* Typography */
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+  --text-completed: #64748B;
+
+  /* Shadows */
+  --shadow-card: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 1px 1px var(--border-subtle);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  /* Rich animated mesh gradient */
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.28) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(244, 63, 94, 0.22) 0%, transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(56, 189, 248, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.18) 0%, transparent 45%),
+    #0A0D16;
+  background-attachment: fixed;
+}
+
+/* Ambient Floating Lights */
+body::before {
+  content: "";
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(99, 102, 241, 0) 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+  animation: floatLight1 18s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(56, 189, 248, 0) 70%);
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+  animation: floatLight2 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatLight1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, 60px) scale(1.15); }
+}
+
+@keyframes floatLight2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-50px, -40px) scale(1.1); }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button, input, select {
+  font-family: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
